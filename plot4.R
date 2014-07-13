@@ -20,7 +20,7 @@ data.feb <- subset(data, datetime >=
 data.feb$global_active_power <- as.numeric(data.feb$Global_active_power)
 data.feb$global_active_power_kw <- data.feb$global_active_power
 png("plot4.png", width = 480, height = 480)
-par(mfrow=c(2,2), mar=c(4,5,2,2))
+par(mfrow=c(2,2), mar=c(5,5,2,2))
 plot(data.feb$datetime,data.feb$global_active_power_kw, 
 	ylab="Global Active Power (kilowatts)", xlab="", main="", type="n")
 lines(data.feb$datetime, data.feb$global_active_power_kw)
@@ -28,7 +28,7 @@ plot(data.feb$datetime,data.feb$Voltage, ylab="Voltage",
 	xlab="datetime", main="", type="n")
 lines(data.feb$datetime,data.feb$Voltage)
 plot(data.feb$datetime,data.feb$Sub_metering_1, 
-	ylab="Energy Sub Metering", xlab="", main="", type="n")
+	ylab="Energy sub metering", xlab="", main="", type="n")
 legend("topright", col=c("Black", "Red", "Blue"), 
        legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), 
        lwd=1, cex=0.9, box.lwd=0)

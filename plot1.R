@@ -20,7 +20,7 @@ data.feb <- subset(data, datetime >= strptime('01/02/2007 00:00:00',
 data.feb$global_active_power <- as.numeric(data.feb$Global_active_power)
 data.feb$global_active_power_kw <- data.feb$global_active_power
 png("plot1.png", width = 480, height = 480)
-par(mfrow = c(1,1), mar=c(4,5,2,2))
+par(mfrow = c(1,1), mar=c(5,5,2,2))
 hist(data.feb$global_active_power_kw, xlab="Global Active Power (kilowatts)", 
 	main="Global Active Power", col="Red")
 dev.off()
